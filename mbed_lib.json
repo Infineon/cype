@@ -1,0 +1,29 @@
+{
+	"name": "cype",
+	"macros": [
+		"LPA_INTEGRATION=0"
+	],
+	"config": {
+        "cpu-stats-enabled": {
+            "macro_name": "MBED_CPU_STATS_ENABLED",
+            "help": "Set to 1 to enable cpu stats. When enabled the function mbed_stats_cpu_get returns non-zero data. See mbed_stats.h for more information",
+            "value": null
+        },
+        "cype-macro-enabled": {
+            "macro_name": "CY_POWER_ESTIMATOR_ENABLE",
+            "help": "Set to 1 to enable cype for code files",
+            "value": null
+        },
+        "cype-wifi-estimation-enabled": {
+            "macro_name": "CY_WIFI_ESTIMATION_ENABLE",
+            "help": "Set to 1 to enable cype wifi estimation",
+            "value": null
+        }
+	},
+    "target_overrides": {
+        "*": {
+            "cpu-stats-enabled": true,
+            "cype-macro-enabled": true  
+	    }
+    }
+}
